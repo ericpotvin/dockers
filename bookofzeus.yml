@@ -1,8 +1,8 @@
-version: "2"
+version: "3"
 
 services:
 
-  ossus-nginx:
+  boz-nginx:
     image: nginx:latest
     container_name: bookofzeus
     labels:
@@ -10,8 +10,6 @@ services:
     hostname: "bookofzeus.dev"
     ports:
      - "8081:80"
-    environment:
-     - "DHC_SIZE=512"
     volumes:
       - /home/eric/Git/bookofzeus.github.io/:/usr/share/nginx/html
       - ./bookofzeus_nginx_configs:/etc/nginx/conf.d
